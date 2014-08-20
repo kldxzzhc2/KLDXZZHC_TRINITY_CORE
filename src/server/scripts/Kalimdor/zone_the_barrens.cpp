@@ -661,7 +661,7 @@ public:
 
 };
 
-
+// zhang hong chao
 #define QUEST_COUNTER_ATTACK 4021
 #define ARRAY_SIZE 25
 
@@ -874,5 +874,5 @@ void AddSC_the_barrens()
     new npc_taskmaster_fizzule();
     new npc_twiggy_flathead();
     new npc_wizzlecrank_shredder();
-	new npc_deadgate();
+	new npc_deadgate();	// zhang hong chao
 }

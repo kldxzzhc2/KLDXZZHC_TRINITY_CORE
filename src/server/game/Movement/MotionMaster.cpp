@@ -88,6 +88,7 @@ void MotionMaster::UpdateMotion(uint32 diff)
 		GetCurrentMovementGeneratorType() != FLEEING_MOTION_TYPE) {  // what about UNIT_STATE_DISTRACTED? Why is this not included?
 		return;
 	}
+
     ASSERT(!empty());
 
     _cleanFlag |= MMCF_UPDATE;

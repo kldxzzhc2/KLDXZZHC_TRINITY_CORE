@@ -41,9 +41,7 @@ class TargetedMovementGeneratorMedium : public MovementGeneratorMedium< T, D >, 
         TargetedMovementGeneratorMedium(Unit* target, float offset, float angle) :
             TargetedMovementGeneratorBase(target), i_path(NULL),
             i_recheckDistance(0), i_offset(offset), i_angle(angle),
-            i_recalculateTravel(false), i_targetReached(false)
-        {
-        }
+            i_recalculateTravel(false), i_targetReached(false) { }
         ~TargetedMovementGeneratorMedium() { delete i_path; }
 
     public:

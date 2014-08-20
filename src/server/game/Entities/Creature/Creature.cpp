@@ -2473,6 +2473,19 @@ bool Creature::SetDisableGravity(bool disable, bool packetOnly/*=false*/)
 
 bool Creature::SetSwim(bool enable)
 {
+	// zhang hong chao
+	CreatureTemplate const* cInfo = GetCreatureTemplate();
+	if ((cInfo->unit_flags & 32768) == 0) {
+		if (enable)
+			if (GetMotionMaster()->GetCurrentMovementGeneratorType() < MAX_DB_MOTION_TYPE) {
+				RemoveFlag(UNIT_FIELD_FLAGS, 32768);
+			} else {
+				SetFlag(UNIT_FIELD_FLAGS, 32768);
+			}
+		else
+			RemoveFlag(UNIT_FIELD_FLAGS, 32768);
+	}
+	
     if (!Unit::SetSwim(enable))
         return false;
 
